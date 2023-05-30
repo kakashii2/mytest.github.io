@@ -1,0 +1,13 @@
+.라디오1, .라디오2 {
+    margin: 10px;
+    
+}
+
+.seperater {
+    border:1px solid gray;
+    margin-bottom: 2px;
+}
+
+.보유장비 {
+    border: 1px solid #d1e0e0;
+}

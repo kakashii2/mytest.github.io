@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+     <!-- 사용자 CSS-->
+     <link rel="stylesheet" href="방.css">
+     <link rel="stylesheet" href="simple_table.css">
+     <link rel="stylesheet" href="hover-min.css">
+     <link rel="stylesheet" href="참여란.css">
+     <link rel="stylesheet" href="별점매기기.css">
+     
+
+    <title>방</title>
+  </head>
+  <body>
+    <!--네브바-->
+    <div class="bg-primary ">
+      <div class="row justify-content-between">
+          <!--네브바 사용자 프로필 드랍다운 버튼-->
+      <div class="col-3 btn-group">
+        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="기본프로필.png" class="hvr-glow 네브바_사용자_프로필" alt="">
+            <label for="" style="color:white">서태웅 님</label>
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item hvr-sweep-to-right" href="#">방리스트로 돌아가기</a>
+            <a class="dropdown-item hvr-sweep-to-right" href="#">마이페이지</a>
+            <a class="dropdown-item hvr-sweep-to-right" href="#">참가중인 방 목록</a>
+            <a class="dropdown-item hvr-sweep-to-right" href="#">친구목록</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item hvr-sweep-to-right" href="#">로그아웃</a>
+          </div>
+      </div>
+
+      <!--종 버튼(알림내역)-->
+      <a class="col-2 navbar-brand" href="#">
+        <button class="btn btn-primary hvr-glow" type="button">        
+            <svg width="1.5em" height="2em" viewBox="0 0 16 16" class="bi bi-bell-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: black !important">
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+            </svg>
+        </button>
+      </a>
+      </div>
+  </div>
+
+    <div class="container  c1 ">
+        <!--방 상단바-->
+        <div class="row justify-content-around bg-primary border-bottom r1">
+            <div class="col-l bg-primary border 네브1" id="네브1">농구</div>
+           
+            <div class="col-10 bg-pri border 네브1">방 제목</div>          
+        </div>
+
+        <!--방 정보 더보기 란 / 참여하기 버튼-->
+        <div class="row m-2 justify-content-around border-bottom">
+            
+            <!-- 방 정보 더보기 란 -->
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#방정보더보기">
+              방 정보 더보기
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="방정보더보기" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-danger">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: white;">방 정보</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <table class="simple_table">
+                      <tbody>
+                        <tr>
+                          <th scope="row">방 호스트</th>
+                          <td>민성</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">종목</th>
+                          <td>농구</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">장소</th>
+                          <td>경희대 농구장</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">세부사항</th>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">생성시간 </th>
+                          <td>#</td>
+                        </tr>
+                      </tbody>
+                    </table>         
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                      닫기
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 채팅버튼 (팝업x, 페이지이동)-->
+            <a href="#채팅창">
+              <button type="button" class="btn btn-success">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                  <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg> 채팅
+              </button>
+            </a>
+            
+
+            
+                
+
+            <!-- 참여하기 버튼을 눌렀을 때 나타나는 팝업창 -->
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#참여하기버튼">참여하기</button> 
+                    
+            <!-- 참여하기 버튼을 눌렀을 때 팝업창 -->
+            <div class="modal fade" id="참여하기버튼" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: white;">참여하기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">운동 수준</span>
+                      </div>
+                      <div>
+                        <label><input class="라디오1" type="radio" name="standard1" value="상">상</label>
+                        <label><input class="라디오1" type="radio" name="standard1" value="중">중</label>
+                        <label><input class="라디오1" type="radio" name="standard1" value="하">하</label>
+                        <label><input class="라디오1" type="radio" name="standard1" value="미기재">미기재</label>
+                      </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">발열 유무</span>
+                      </div>
+                      <div>
+                        <label><input class="라디오2" type="radio" name="standard2" value="top">유</label>
+                        <label><input class="라디오2" type="radio" name="standard2" value="mid">무</label>
+                      </div>
+                    </div>
+
+                    <div class="input-group mb-3 d-inline-flex">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">예상 도착시간</span>
+                      </div>
+                      <input type="time" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="오후 0시 00분">
+                    </div>
+                    
+                    <div class="input-group mb-3 d-inline-flex">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">스포츠 가능시간</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="0시간 00분">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">인상착의</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="인상착의를 입력해주세요.">
+                    </div>
+                    
+                    <div class="container border rounded">
+                      <div class="row justify-content-center 보유장비">
+                        보유장비
+                      </div>
+                      <div class="row">
+                        <div class="col border-right">
+                          <img src="농구공.GIF" width="60" height="60" alt="...">
+                        </div>
+                        <div class="col">
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroup-sizing-default">개수</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                            placeholder="0개">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">확인</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </button>
+
+        </div>
+
+        <!-- 방 상단바 아래 사용자 표시란-->
+        <div class="row r2">
+            <div class="container c2">
+
+                    <!--사용자_호스트-->
+                    <div class="col 방1">
+                      <!--사용자 표시란 구성-->
+                      <!--호스트아이콘/닉네임-->
+                      <div class="row justify-content-around bg-success" style="color: white;">
+                          <div class="col-4  방-상단바">
+                            <button type="button" class="btn btn-secondary btn-sm 사용자정보_팝오버">
+                              <img src="왕관.ico" alt="">    
+                            </button>
+                          </div> 
+                          <div class="col rounded-pill border 방-상단바">닉네임</div>
+                          
+                      </div>
+                      <div class="row bg-white">
+
+                          <!--사용자 프로필 넣는 곳-->
+                          <div class="col-4 border-right border-success">                   
+                            <div class="사용자_프로필_프레임">
+                              <img src="기본프로필.png" class="align-self-center " alt="...">
+                            </div>
+                                           
+                          </div>
+
+                          <!--사용자 정보 팝오버 버튼 넣는 곳-->
+                          <div class="col">
+                            <div class="row justify-content-around">
+
+                              <div class="사용자정보란">
+                                <button type="button" class="btn btn-warning">
+                                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>4.5
+                                </button> 
+                              </div>                          
+                              
+                              <div class=" 사용자정보란 ">
+                                <button type="button" class="btn btn-secondary btn-sm 사용자정보_팝오버">
+                                    남성
+                                </button>
+                              </div>
+
+                              <div class=" 사용자정보란">
+                                  <!--사용자 정보 더보기_팝업-->
+                                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#호스트" data-whatever="@mdo">더보기</button>
+                                  <div class="modal fade" id="호스트" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                          <div class="modal-content">
+                                              <div class="modal-header bg-danger">
+                                                  <h5 class="modal-title" id="exampleModalLabel" style="color: white;">'닉네임'님의 정보</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                <div class="사용자정보표">                
+                                                  <table class="simple_table">
+                                                    <tbody>
+                                                      <tr>
+                                                        <th scope="row">운동 수준</th>
+                                                        <td>상</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">발열 유무</th>
+                                                        <td>무</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">예상 도착시간</th>
+                                                        <td>오후 1시 11분</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">스포츠 가능시간</th>
+                                                        <td>2시간 20분</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">인상착의</th>
+                                                        <td>흰 모자</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">보유장비</th>
+                                                        <td>농구공 0개</td>
+                                                      </tr>                                                    
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                                
+                                                <!--별점 매기기-->
+                                                <div class="ratingbody">
+                                                  <div class="ratingcontainer">
+                                                    <div class="rating-wrap">
+                                                      <h2 style="font-size: 1.5rem;">사용자 평가</h2>
+                                                      <div class="center">
+                                                        <fieldset class="rating">
+                                                          <input type="radio" id="star5" name="rating" value="5점"/><label for="star5" class="full" title="Awesome"></label>
+                                                          <input type="radio" id="star4.5" name="rating" value="4.5점"/><label for="star4.5" class="half"></label>
+                                                          <input type="radio" id="star4" name="rating" value="4점"/><label for="star4" class="full"></label>
+                                                          <input type="radio" id="star3.5" name="rating" value="3.5점"/><label for="star3.5" class="half"></label>
+                                                          <input type="radio" id="star3" name="rating" value="3점"/><label for="star3" class="full"></label>
+                                                          <input type="radio" id="star2.5" name="rating" value="2.5점"/><label for="star2.5" class="half"></label>
+                                                          <input type="radio" id="star2" name="rating" value="2점"/><label for="star2" class="full"></label>
+                                                          <input type="radio" id="star1.5" name="rating" value="1.5점"/><label for="star1.5" class="half"></label>
+                                                          <input type="radio" id="star1" name="rating" value="1점"/><label for="star1" class="full"></label>
+                                                          <input type="radio" id="star0.5" name="rating" value="0.5점"/><label for="star0.5" class="half"></label>
+                                                        </fieldset>
+                                                      </div>
+                                                
+                                                      <h4 id="rating-value"></h4>
+                                                    </div>
+                                                  </div>
+                                                
+                                                  <script src="star-ratings.js"></script>
+                                                </div>
+                                                
+                                                
+                                                                                                                                              
+                                                  
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <!--친구추가 버튼(팝업)-->
+                                                  <!-- Button trigger modal -->
+                                                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#친구추가">
+                                                    친구추가
+                                                  </button>
+
+                                                  <!-- Modal -->
+                                                  <div class="modal fade" id="친구추가" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          친구추가 되었습니다!
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                          <button type="button" class="btn btn-success">친구목록</button>
+                                                          <button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  <button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>                                                    
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+ 
+                          </div>
+                      </div>
+                  </div>
+
+                   <!--사용자_참여자-->
+                   <div class="col 방1">
+                    <!--사용자 표시란 구성-->
+                    <!--x/닉네임-->
+                    <div class="row justify-content-around bg-success" style="color: white;">
+                        <div class="col-4  방-상단바">
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                        </div>
+                        <div class="col rounded-pill border 방-상단바">닉네임</div>
+                        
+                    </div>
+                    <div class="row bg-white">
+
+                        <!--사용자 프로필 넣는 곳-->
+                        <div class="col-4 border-right border-success">
+                          
+                            <div class="사용자_프로필_프레임">
+                              <img src="기본프로필.png" class="align-self-center " alt="...">
+                            </div>                                                                    
+                          
+                        </div>
+
+                        <!--사용자 정보 팝오버 버튼 넣는 곳-->
+                        <div class="col">
+                          <div class="row justify-content-around">
+                            <div class="사용자정보란">
+                              <button type="button" class="btn btn-warning">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>4.1
+                              </button> 
+                            </div>   
+                            
+                            <div class=" 사용자정보란 ">
+                              <button type="button" class="btn btn-secondary btn-sm 사용자정보_팝오버">
+                                  남성
+                              </button>
+                            </div>
+
+                            <div class=" 사용자정보란">
+                                <!--사용자 정보 더보기_팝업-->
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#참여자1" data-whatever="@mdo">더보기</button>
+                                <div class="modal fade" id="참여자1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-danger">
+                                                <h5 class="modal-title" id="exampleModalLabel" style="color: white;">사용자 정보</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <table class="simple_table">
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">발열 유무</th>
+                                                    <td>무</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">예상 도착시간</th>
+                                                    <td>오후 1시 11분</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">스포츠 가능시간</th>
+                                                    <td>2시간 20분</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">인상착의</th>
+                                                    <td>흰 모자</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">보유장비</th>
+                                                    <td>농구공 0개</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>                                  
+                                            </div>
+                                            
+
+                                            <div class="modal-footer">
+                                               <!--친구추가 버튼(팝업)-->
+                                                  <!-- Button trigger modal -->
+                                                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#친구추가2">
+                                                    친구추가
+                                                  </button>
+
+                                                  <!-- Modal -->
+                                                  <div class="modal fade" id="친구추가2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          친구추가 되었습니다!
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                          <button type="button" class="btn btn-success">친구목록</button>
+                                                          <button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <!-- 맨 아래 기타란-->
+        
+    </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="방.js"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

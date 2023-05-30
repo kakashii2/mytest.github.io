@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    font-family:'Do Hyeon', sans-serif;
+    color: rgba(0, 0, 0, 0.829);
+    
+}
+
+.친구목록_컨테이너{
+    margin-top: 20px;
+    border-radius: 5px !important
+}
+
+.네브바_사용자_프로필 {
+    border-radius: 35%;
+    width: 35px;
+    height: 35px;
+}
+
+.사용자_닉네임 {
+    vertical-align: middle;
+    justify-content: start;
+}
+
+.사용자_프로필 {
+    border-radius: 35%;
+}
+

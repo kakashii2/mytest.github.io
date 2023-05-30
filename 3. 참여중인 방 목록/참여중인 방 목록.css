@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    font-family:'Do Hyeon', sans-serif;
+    color: rgba(0, 0, 0, 0.829);
+    
+}
+
+#box1,#box2,#box3 {
+    margin-bottom: 10px;
+}
+
+#box1 {
+    border:2px solid #1a75ff;
+    color: white;
+    background-color: #1a75ff;
+}
+
+#box2 {
+    border-bottom:1px solid blanchedalmond;
+    height: 500px;
+}
+
+
+.방 {
+    border: 6px solid #1a75ff;
+    margin: 5px;
+    padding: 10px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.row {
+    text-align: center;
+}
+
+.컨테이너 {
+    border: 4px solid #1a75ff;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.상단 {
+    border-bottom: 2px solid #1a75ff;
+    background-color:  #1a75ff;
+    color: white;
+}
+
+.리스트전체테두리 {
+    border: 3px solid #33b75b;
+    border-radius: 5px;
+}
+
+.구분선_오른쪽 {
+    border-right: 3px solid #33b75b
+}
+
+.구분선_아래쪽 {
+    border-bottom: 1px solid #33b75b;
+}
+
+.구분선_위쪽 {
+    border-top: 3px solid #33b75b;
+}
+
+.중단 {
+    background-color: whitesmoke;
+}
+
+.하단 {
+    border-top: 3px solid  #1a75ff;
+    padding-top: 5px;
+}
+
+.호스트_참여정보 {
+    
+    color: white;
+}
+
+.네브바_사용자_프로필{
+    border-radius: 35%;
+    width: 35px;
+    height: 35px;
+}

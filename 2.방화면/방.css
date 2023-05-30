@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    font-family:'Do Hyeon', sans-serif;
+    
+}
+
+.c1 {
+    border: 3px solid gray;
+    
+    border-radius: 4px;
+
+}
+
+body {
+    
+    text-align: center;
+    
+}
+
+.row {
+
+    
+    text-align: center;
+    
+}
+
+
+
+.네브1 {
+    color: white;
+    margin: 5px auto;
+    padding: 4px ; 
+    border-radius: 5px;
+}
+
+
+
+
+.c1{
+    margin-top: 20px;
+    border: 3px solid #1a75ff;
+    border-radius: 3px;
+
+}
+
+.c2 {
+    background-color: white;
+    
+}
+
+.방1 {
+    
+    background-color: #009900;
+    margin: 7px ;
+    padding-top: 2px ; 
+    border-radius: 5px;
+    border: 2px solid #009900;
+    border-radius: 5px;
+    
+}
+
+.방-상단바 {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.사용자정보란 {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+}
+
+
+
+.기타 {
+    background-color: slategrey;
+}
+
+.보유장비 {
+    background-color: #d1e0e0;
+    border-radius: 5px;
+}
+
+.네브바_사용자_프로필{
+    border-radius: 35%;
+    width: 35px;
+    height: 35px;
+}
+
+
+
